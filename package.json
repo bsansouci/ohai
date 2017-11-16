@@ -1,0 +1,9 @@
+{
+  "name": "ohai",
+  "dependencies": {
+    "bs-containers": "reasonml-community/bs-containers"
+  },
+  "dev-dependencies": {
+    "bs-platform": "bsansouci/bsb-native"
+  }
+}

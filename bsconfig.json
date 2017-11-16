@@ -1,0 +1,9 @@
+{
+  "name": "ohai",
+  "sources": ["src", "bin"],
+  "bs-dependencies": ["bs-containers"],
+  "entries": [{
+    "backend": "bytecode",
+    "main-module": "Ohai"
+  }]
+}

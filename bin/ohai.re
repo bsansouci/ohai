@@ -1,2 +1,2 @@
 
-Lib.Main.run();
+Main.run();

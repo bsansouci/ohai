@@ -24,9 +24,9 @@ depends: [
   info.version
   info.maintainer
   info.maintainer
-  (info.homepage |> CCOpt.get_or default::"")
-  (info.bug_reports |> CCOpt.get_or default::"")
-  (info.dev_repo |> CCOpt.get_or default::"")
+  (info.homepage |> Bopt.getOr default::"")
+  (info.bug_reports |> Bopt.getOr default::"")
+  (info.dev_repo |> Bopt.getOr default::"")
   (switch (info.license) {
   | Some s => Printf.sprintf "%S" s
   | None => ""

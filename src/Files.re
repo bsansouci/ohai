@@ -28,7 +28,7 @@ let bin_files info => {
 let lib_files info => {
   open Info.T;
   let ext = info.reason ? ".re" : ".ml";
-  let capName = CCString.capitalize_ascii info.name;
+  let capName = Bstring.capitalize_ascii info.name;
 
   [
     ("Makefile", Templates.Lib.make info.name),

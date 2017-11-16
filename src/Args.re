@@ -69,7 +69,7 @@ let cmd_init opts arg => {
     print_endline help;
     exit 1;
   }
-  | arg when (CCString.prefix pre::"-" arg) => {
+  | arg when (Bstring.prefix pre::"-" arg) => {
     Printf.printf "!! Invalid argument %s\n\n" arg;
     exit 1
   }

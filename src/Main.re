@@ -44,12 +44,12 @@ let validate_info args info => {
  * A helper fn for making sure all of the parent directories of a filename are present.
  */
 let mkdirs name => {
-  let parts = CCString.split_on_char '/' name;
+  let parts = Bstring.Split.list_cpy by::"/" name;
   let rec loop parts parent => switch parts {
   | [] | [_] => ()
   | [part, ...rest] => {
     let full = (parent ^ "/" ^ part);
-    if (not (CCIO.File.exists full)) {
+    if (not (BIO.File.exists full)) {
       Unix.mkdir full 0o755;
     };
     loop rest full
@@ -61,7 +61,7 @@ let mkdirs name => {
 
 let write_file (name, contents) => {
   mkdirs name;
-  CCIO.File.write_exn (CCIO.File.make name) contents;
+  BIO.File.write_exn (BIO.File.make name) contents;
 };
 
 let run () => {
