@@ -1,9 +1,12 @@
 {
   "name": "ohai",
   "dependencies": {
-    "bs-containers": "reasonml-community/bs-containers"
+    "bs-containers": "bsansouci/bs-containers"
   },
-  "dev-dependencies": {
+  "scripts": {
+    "build": "bsb -make-world"
+  },
+  "devDependencies": {
     "bs-platform": "bsansouci/bsb-native"
   }
 }

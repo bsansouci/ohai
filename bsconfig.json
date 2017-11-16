@@ -1,9 +1,12 @@
 {
   "name": "ohai",
-  "sources": ["src", "bin"],
+  "sources": ["src", "bin", {"dir": "test", "type": "dev"}],
   "bs-dependencies": ["bs-containers"],
   "entries": [{
     "backend": "bytecode",
     "main-module": "Ohai"
+  },{
+    "backend": "bytecode",
+    "main-module": "Test"
   }]
 }

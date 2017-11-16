@@ -13,7 +13,6 @@ let check x message => {
 };
 
 let test_args () => {
-  let module Args = Lib.Args;
   let fixtures = [
     ([|"ohai"|], Args.Cmds.NoCmd),
 
